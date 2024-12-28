@@ -37,16 +37,17 @@ const Card = ({ className }: { className?: string }) => {
   const data = useMemo(() => {
     const imageInfo = res?.data?.[0];
     if (imageInfo) {
+      const breadInfo = imageInfo.breeds?.[0];
       return {
-        id: res?.data?.[0].id,
-        image: res?.data?.[0].url,
-        name: res?.data?.[0].breeds?.[0].name,
-        for: res?.data?.[0].breeds?.[0].bredFor,
-        weight: res?.data?.[0].breeds?.[0].weight.imperial,
-        height: res?.data?.[0].breeds?.[0].height.imperial,
-        breedGroup: res?.data?.[0].breeds?.[0].breedGroup,
-        temperament: res?.data?.[0].breeds?.[0].temperament,
-        lifeSpan: res?.data?.[0].breeds?.[0].lifeSpan,
+        id: imageInfo.id,
+        image: imageInfo.url,
+        name: breadInfo.name,
+        for: breadInfo.bredFor,
+        weight: breadInfo.weight.imperial,
+        height: breadInfo.height.imperial,
+        breedGroup: breadInfo.breedGroup,
+        temperament: breadInfo.temperament,
+        lifeSpan: breadInfo.lifeSpan,
       };
     }
   }, [res]);
