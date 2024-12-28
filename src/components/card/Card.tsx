@@ -78,7 +78,10 @@ const Card = ({ className }: { className?: string }) => {
   return (
     <div
       data-testid="card-container"
-      className={cn("md:rounded-xl md:shadow overflow-hidden", className)}
+      className={cn(
+        "md:rounded-xl md:shadow-lg overflow-hidden p-4",
+        className,
+      )}
       {...handleSwipe()}
     >
       <div

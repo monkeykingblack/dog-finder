@@ -26,6 +26,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: hsl(0, 0%, 96.5%);
 }
 
 button {
