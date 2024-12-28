@@ -2,6 +2,15 @@
 
 A Project that help people can find the dog is suitable for them by showing picture of dog breeds. Voting image, listing favorite breeds.
 
+### Features
+
+- [x] Display random image, full breed information
+- [x] Up/Down vote image
+- [x] Super like image
+- [x] Swipe (right/left/up) to voting image
+- [ ] List all images are voted
+- [ ] Filter image voted by type (up/down/super)
+
 ### How to run
 
 After cloned the project, follow these step to setup project
