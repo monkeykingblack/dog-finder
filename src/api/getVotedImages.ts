@@ -1,5 +1,12 @@
 import { axios } from "../helpers/axios";
 
-export default function getVotedImages() {
-  return axios.get("/votes");
+type GetVotedImagesParams = {
+  page?: number;
+  limit?: number;
+  attachImage?: boolean;
+  order?: "ASC" | "DESC";
+};
+
+export default function getVotedImages(params?: GetVotedImagesParams) {
+  return axios.get("/votes", { params });
 }

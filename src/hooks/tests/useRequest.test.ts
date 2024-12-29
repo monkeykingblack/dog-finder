@@ -1,7 +1,7 @@
 import { act, renderHook, waitFor } from "@testing-library/react";
 import { expect } from "vitest";
 
-import useRequest from "./useRequest";
+import useRequest from "../useRequest";
 
 const TEST_DATA = {
   id: "BkIEhN3pG",

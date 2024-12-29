@@ -1,12 +1,11 @@
 import type { Mock } from "vitest";
 
-import { useDrag } from "react-use-gesture";
-
 import { act, renderHook } from "@testing-library/react";
+import { useDrag } from "@use-gesture/react";
 
-import useSwipe from "./useSwipe";
+import useSwipe from "../useSwipe";
 
-vi.mock("react-use-gesture", () => ({
+vi.mock("@use-gesture/react", () => ({
   useDrag: vi.fn(),
 }));
 

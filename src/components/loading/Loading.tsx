@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 
 import { Player } from "@lordicon/react";
 
-import { tv } from "../../utils/tv";
+import { tv } from "../../utils";
 import Spin from "./spin.json";
 
 const loadingVariant = tv({
