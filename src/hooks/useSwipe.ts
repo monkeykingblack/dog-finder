@@ -18,7 +18,7 @@ export default function useSwipe(
   const bind = useDrag((event) => {
     const {
       last,
-      offset: [vx, vy],
+      movement: [vx, vy],
     } = event;
     const { onDrag, onDown, onLeft, onRight, onUp } = actions || {};
 

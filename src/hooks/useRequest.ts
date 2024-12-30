@@ -53,7 +53,7 @@ export default function useRequest<
         setLoading(false);
       }
     },
-    [onError, onSuccess, requestFn],
+    [onError, onSuccess, JSON.stringify(requestFn)],
   );
 
   const refetch = React.useCallback(() => {

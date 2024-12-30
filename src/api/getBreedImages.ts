@@ -13,8 +13,14 @@ export type GetBreedImagesParams = {
   order?: "RANDOM" | "ASC" | "DESC";
 };
 
-export function getBreedImages(params: GetBreedImagesParams = {}) {
-  return axios.get<IBreedImage[]>(`/images/search`, { params });
+export async function getBreedImages(params: GetBreedImagesParams = {}) {
+  const res = await axios.get(`/images/search`, { params });
+  const data = res.data as IBreedImage[];
+  return data.map((d) => ({
+    id: d.id,
+    url: d.url,
+    breeds: d.breeds.map((b) => ({ name: b.name, for: b.bredFor })),
+  }));
 }
 
 export function getBreedImageSrc() {
