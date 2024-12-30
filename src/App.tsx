@@ -8,7 +8,7 @@ function App() {
 
   return (
     <AppProvider>
-      <div className="min-h-screen w-full bg-gray-100">
+      <div className="h-full w-full bg-gray-100 flex flex-col">
         {/* Navigation */}
         <div className="sticky top-0 z-50 bg-gray-100 p-4 sm:p-6">
           <div className="max-w-md mx-auto flex justify-between items-center">

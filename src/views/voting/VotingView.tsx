@@ -50,8 +50,8 @@ export const VotingView = () => {
   });
 
   return (
-    <div className="p-4 sm:p-6 overflow-hidden">
-      <div className="max-w-md mx-auto">
+    <div className="flex-1 overflow-hidden p-4 sm:p-6">
+      <div className="mx-auto max-w-md">
         <animated.div {...bind()} style={{ x, y }}>
           <Card className="relative overflow-hidden shadow-xl">
             <CardHeader className="relative w-full h-[300px]">

@@ -18,12 +18,19 @@
   -webkit-text-size-adjust: 100%;
 }
 
+html {
+  height: -webkit-fill-available;
+}
+
 body {
   margin: 0;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  /* Mobile viewport bug fix
+    Ref: https://allthingssmitty.com/2020/05/11/css-fix-for-100vh-in-mobile-webkit/
+   */
+  min-height: -webkit-fill-available;
   background: hsl(0, 0%, 96.5%);
 }
 
