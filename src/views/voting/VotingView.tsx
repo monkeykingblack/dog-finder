@@ -1,6 +1,5 @@
 import { useCallback } from "react";
 
-import { Player } from "@lordicon/react";
 import { animated, useSpring } from "@react-spring/web";
 
 import {
@@ -38,7 +37,7 @@ export const VotingView = () => {
 
     if (axis === "x") {
       api.start({ x });
-    } else {
+    } else if (y < 0) {
       api.start({ y });
     }
   }, []);
@@ -52,7 +51,7 @@ export const VotingView = () => {
   return (
     <div className="flex-1 overflow-hidden p-4 sm:p-6">
       <div className="mx-auto max-w-md">
-        <animated.div {...bind()} style={{ x, y }}>
+        <animated.div {...bind()} style={{ x, y, touchAction: "pan-y" }}>
           <Card className="relative overflow-hidden shadow-xl">
             <CardHeader className="relative w-full h-[300px]">
               <div
@@ -77,14 +76,14 @@ export const VotingView = () => {
             <CardContent className="bg-white p-4">
               <div className="flex justify-between">
                 <button>
-                  <Player icon={ThumbDown} size={32} />
+                  <lord-icon src={ThumbDown} trigger={"click"} />
                 </button>
                 <div className="flex space-x-4">
                   <button>
-                    <Player icon={LoveHeart} size={32} />
+                    <lord-icon src={LoveHeart} trigger={"click"} />
                   </button>
                   <button>
-                    <Player icon={ThumbUp} size={32} />
+                    <lord-icon src={ThumbUp} trigger={"click"} />
                   </button>
                 </div>
               </div>
