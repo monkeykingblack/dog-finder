@@ -53,7 +53,7 @@ export const VotingView = () => {
       <div className="mx-auto max-w-md">
         <animated.div {...bind()} style={{ x, y, touchAction: "pan-y" }}>
           <Card className="relative overflow-hidden shadow-xl">
-            <CardHeader className="relative w-full h-[300px]">
+            <CardHeader className="relative h-[300px] w-full">
               <div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
@@ -62,12 +62,12 @@ export const VotingView = () => {
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               </div>
-              <div className="absolute bottom-0 left-0 right-0 z-10 p-4 bg-white/15">
+              <div className="absolute bottom-0 left-0 right-0 z-10 bg-white/15 p-4">
                 <div className="text-white">
-                  <CardTitle className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">
+                  <CardTitle className="mb-1 text-2xl font-bold sm:mb-2 sm:text-3xl">
                     Bengal
                   </CardTitle>
-                  <CardDescription className="text-base sm:text-lg opacity-90">
+                  <CardDescription className="text-base opacity-90 sm:text-lg">
                     Feed
                   </CardDescription>
                 </div>
